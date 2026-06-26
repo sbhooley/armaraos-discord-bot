@@ -47,7 +47,7 @@ export class StartCommand extends Command {
           value: '[ainativelang on GitHub](https://github.com/sbhooley/ainativelang) · [armaraos on GitHub](https://github.com/sbhooley/armaraos)',
         },
       )
-      .setFooter({ text: 'Community bot ≠ personal ArmaraOS agent bot (separate tokens)' });
+      .setFooter({ text: 'ArmaraOSDBot · Community bot ≠ personal ArmaraOS agent (separate tokens)' });
 
     const row = new ActionRowBuilder<MessageActionRowComponentBuilder>().addComponents(
       new ButtonBuilder()
