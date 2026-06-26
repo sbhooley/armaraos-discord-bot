@@ -37,6 +37,15 @@ It writes `.env`, maps channels/roles automatically, registers slash commands, a
 
 **GitHub:** https://github.com/sbhooley/armaraos-discord-bot
 
+## Production (inferx VM)
+
+```bash
+npm run deploy:inferx
+# INFERX_HOST=161.153.113.55 npm run deploy:inferx  # alternate inferx IP
+```
+
+First-time: create `.env` on the VM — see **[docs/DEPLOY_INFERX.md](docs/DEPLOY_INFERX.md)**.
+
 ## Manual quick start
 
 Full guide: **[docs/SETUP.md](docs/SETUP.md)**  

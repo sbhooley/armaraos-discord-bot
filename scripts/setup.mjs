@@ -109,7 +109,7 @@ function mergeConfig(updates) {
 
 function printInviteUrl(clientId) {
   // Send Messages, Embed Links, Read History, Add Reactions, Manage Threads, Use Slash Commands
-  const permissions = '274877975552';
+  const permissions = '363193298112';
   const url = `https://discord.com/api/oauth2/authorize?client_id=${clientId}&permissions=${permissions}&scope=bot%20applications.commands`;
   log(`\n${BOLD}Invite the bot to your server (open this URL):${RESET}`);
   log(url);

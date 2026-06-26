@@ -17,7 +17,8 @@
     "setup": "node scripts/setup.mjs",
     "setup:portal": "bash scripts/open-discord-portal.sh",
     "finish": "node scripts/finish-setup.mjs",
-    "invite": "node scripts/print-invite.mjs"
+    "invite": "node scripts/print-invite.mjs",
+    "deploy:inferx": "bash scripts/deploy-inferx.sh"
   },
   "keywords": ["discord", "armaraos", "ainl", "community"],
   "license": "MIT",
