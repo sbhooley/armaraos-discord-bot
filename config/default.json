@@ -1,0 +1,56 @@
+{
+  "siteBaseUrl": "https://www.ainativelang.com",
+  "channels": {
+    "welcome": null,
+    "releases": null,
+    "modLog": null,
+    "staffSupport": null,
+    "communityHighlights": null,
+    "showcase": null
+  },
+  "roles": {
+    "staffIds": [],
+    "regularId": null,
+    "contributorId": null,
+    "announcementsId": null,
+    "armaraosUserId": null
+  },
+  "faq": {
+    "channelIds": [],
+    "confidenceThreshold": 0.75,
+    "assistInHelpForum": true,
+    "corpusPath": "config/faq.seed.yaml"
+  },
+  "xp": {
+    "enabled": true,
+    "messageXpMin": 5,
+    "messageXpMax": 15,
+    "helpfulReactionEmoji": "✅",
+    "helpfulReactionXp": 50,
+    "cooldownMs": 60000,
+    "levelRoleThresholds": {
+      "5": "regularId",
+      "15": "contributorId"
+    }
+  },
+  "scamShield": {
+    "enabled": true,
+    "deleteMessage": true,
+    "warnUser": true
+  },
+  "releaseWatcher": {
+    "enabled": true,
+    "intervalMinutes": 15
+  },
+  "weeklyDigest": {
+    "enabled": true,
+    "cron": "0 16 * * 1"
+  },
+  "showcasePrompt": {
+    "enabled": true,
+    "cron": "0 17 * * 5"
+  },
+  "tickets": {
+    "categories": ["Install", "AINL", "Bug", "Other"]
+  }
+}

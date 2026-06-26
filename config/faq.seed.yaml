@@ -1,0 +1,93 @@
+# Starter FAQ — expand before Phase 2 FAQ assist
+# Sources: ainativelang.com/docs, armaraos docs, AGENTS.md
+
+faqs:
+  - id: install-armaraos
+    patterns:
+      - "how do i install armaraos"
+      - "download armaraos"
+      - "mac install"
+    answer: |
+      Install ArmaraOS from the official download page. macOS Apple Silicon and Intel builds
+      are listed at https://www.ainativelang.com/armaraos — avoid third-party mirrors.
+    links:
+      - https://www.ainativelang.com/armaraos
+      - https://github.com/sbhooley/armaraos/blob/main/docs/desktop.md
+
+  - id: ainl-mcp-adapters
+    patterns:
+      - "adapter not registered"
+      - "mcp ainl_run http"
+      - "ainl_run adapters"
+    answer: |
+      MCP `ainl_run` only registers `core` by default. Workflows using `http`, `fs`, `cache`, or
+      `sqlite` must pass an `adapters` object with `enable` and per-adapter config.
+      See AI_Native_Lang AGENTS.md — MCP adapter requirement section.
+    links:
+      - https://github.com/sbhooley/ainativelang/blob/main/AGENTS.md
+
+  - id: discord-two-bots
+    patterns:
+      - "two discord bots"
+      - "bot token conflict"
+      - "409 gateway"
+    answer: |
+      Use a **separate bot token** for the community server vs ArmaraOS `[channels.discord]`.
+      Only one process may connect per token. See armaraos docs/channel-adapters.md — Multiple bots.
+    links:
+      - https://github.com/sbhooley/armaraos/blob/main/docs/channel-adapters.md
+
+  - id: inferx-keys
+    patterns:
+      - "inferx"
+      - "ix_ key"
+      - "usage api"
+    answer: |
+      inferx-keys manages API keys and usage for hosted inference. Account usage history is
+      available via the inferx-keys API documented on ainativelangweb.
+    links:
+      - https://www.ainativelang.com/pricing
+
+  - id: openrouter-free
+    patterns:
+      - "openrouter"
+      - "rate limit"
+      - "403 billing"
+    answer: |
+      ArmaraOS chat defaults include OpenRouter free models with fallbacks. Check OPENROUTER_API_KEY,
+      billing status, and armaraos docs/openrouter.md for 401 vs 403 vs rate-limit banners.
+    links:
+      - https://github.com/sbhooley/armaraos/blob/main/docs/openrouter.md
+
+  - id: graph-memory
+    patterns:
+      - "graph memory"
+      - "ainl_memory.db"
+      - "memory merge"
+    answer: |
+      Per-agent graph memory lives in ~/.armaraos/agents/<id>/ainl_memory.db. See armaraos docs/graph-memory.md
+      and AINL ainl_graph_memory adapter docs.
+    links:
+      - https://github.com/sbhooley/armaraos/blob/main/docs/graph-memory.md
+
+  - id: strict-validate
+    patterns:
+      - "ainl validate"
+      - "strict mode"
+      - "empty_source"
+    answer: |
+      Run `ainl validate file.ainl --strict` locally or `/ainl validate` in Discord (requires ainl serve).
+      MCP empty_source / path_not_found: use ainl_get_started instead of retrying empty buffers — see AGENTS.md.
+    links:
+      - https://github.com/sbhooley/ainativelang/blob/main/AGENTS.md
+
+  - id: http-adapter
+    patterns:
+      - "http.get"
+      - "could not convert string to float"
+      - "params = timeout"
+    answer: |
+      AINL http.GET uses positional args only: URL, optional headers dict, optional timeout number.
+      Do not use params= or timeout= named args on R lines. Put query strings in the URL.
+    links:
+      - https://github.com/sbhooley/ainativelang/blob/main/AGENTS.md
