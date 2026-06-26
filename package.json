@@ -18,6 +18,8 @@
     "setup:portal": "bash scripts/open-discord-portal.sh",
     "finish": "node scripts/finish-setup.mjs",
     "invite": "node scripts/print-invite.mjs",
+    "deploy:legacy": "bash scripts/deploy-legacy-inferx.sh",
+    "deploy:keys": "bash scripts/deploy-inferx-keys.sh",
     "deploy:inferx": "bash scripts/deploy-inferx.sh"
   },
   "keywords": ["discord", "armaraos", "ainl", "community"],

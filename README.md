@@ -37,14 +37,16 @@ It writes `.env`, maps channels/roles automatically, registers slash commands, a
 
 **GitHub:** https://github.com/sbhooley/armaraos-discord-bot
 
-## Production (inferx VM)
+## Production (Oracle VM)
+
+**Do not use inferx-v2 data plane (`161.153.113.55`)** — keep that for inference only.
 
 ```bash
-npm run deploy:inferx
-# INFERX_HOST=161.153.113.55 npm run deploy:inferx  # alternate inferx IP
+npm run deploy:legacy   # recommended — old inferx VM (141.148.184.75)
+npm run deploy:keys     # alternative — inferx-keys VM (129.146.42.8)
 ```
 
-First-time: create `.env` on the VM — see **[docs/DEPLOY_INFERX.md](docs/DEPLOY_INFERX.md)**.
+See **[docs/DEPLOY_PRODUCTION.md](docs/DEPLOY_PRODUCTION.md)** for host matrix and first-time `.env` setup.
 
 ## Manual quick start
 
