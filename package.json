@@ -14,7 +14,8 @@
     "typecheck": "tsc --noEmit",
     "db:migrate": "tsx src/db/migrate.ts",
     "register-commands": "tsx scripts/register-commands.ts",
-    "setup": "node scripts/setup.mjs"
+    "setup": "node scripts/setup.mjs",
+    "setup:portal": "bash scripts/open-discord-portal.sh"
   },
   "keywords": ["discord", "armaraos", "ainl", "community"],
   "license": "MIT",

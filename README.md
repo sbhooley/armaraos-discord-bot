@@ -17,18 +17,27 @@ Community server bot for **ArmaraOS / AINL** — product-native support, moderat
 | Engagement | `/rank`, XP, `/link github`, weekly digest & showcase crons |
 | Staff | `/health`, `/assist` (ArmaraOS agent draft) |
 
-## Quick start
+## Quick start (easiest — start here)
+
+**Never set up a Discord bot before?** Read **[docs/BEGINNER_GUIDE.md](docs/BEGINNER_GUIDE.md)** — it is written for zero prior experience.
 
 ```bash
 cd ~/Desktop/Projects/armaraos-discord-bot
-cp .env.example .env          # DISCORD_BOT_TOKEN, DISCORD_CLIENT_ID, DISCORD_GUILD_ID
-# Edit config/default.json — channel + role IDs
-
-npm install
-npm run db:migrate
-npm run register-commands
-npm run dev
+npm run setup:portal   # opens Discord Developer Portal in your browser
+npm run setup          # paste 3 values → auto-configures everything
+npm run dev            # start the bot
 ```
+
+The setup wizard only asks for:
+1. **Bot token** (Developer Portal → Bot → Reset Token)
+2. **Application ID** (Developer Portal → General Information)
+3. **Server ID** (Discord → right-click server → Copy Server ID)
+
+It writes `.env`, maps channels/roles automatically, registers slash commands, and migrates the database.
+
+**GitHub:** https://github.com/sbhooley/armaraos-discord-bot
+
+## Manual quick start
 
 Full guide: **[docs/SETUP.md](docs/SETUP.md)**  
 Server layout: **[docs/SERVER_TEMPLATE.md](docs/SERVER_TEMPLATE.md)**  
